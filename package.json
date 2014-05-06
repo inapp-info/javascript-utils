@@ -26,7 +26,8 @@
     "wiredep": "^1.4.3",
     "gulp-yuidoc": "~0.1.2",
     "gulp-util": "~2.2.14",
-    "gulp-concat": "~2.2.0"
+    "gulp-concat": "~2.2.0",
+    "gulp-qunit": "~0.3.3"
   },
   "engines": {
     "node": ">=0.10.0"
