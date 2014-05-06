@@ -9,9 +9,9 @@ var gulp = require('gulp'),
 
 
 gulp.task('js', function() {
-    gulp.src('./js/*.js')
+    gulp.src('./src/*.js')
             .pipe(uglify())
-            .pipe(concat('build.js'))
+            .pipe(concat('inapp-utils.min.js'))
             .pipe(gulp.dest('.'));
 });
 
