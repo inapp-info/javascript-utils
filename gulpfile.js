@@ -4,7 +4,8 @@
 var gulp = require('gulp'),
         gutil = require('gulp-util'),
         uglify = require('gulp-uglify'),
-        concat = require('gulp-concat');
+        concat = require('gulp-concat'),
+        yuidoc = require("gulp-yuidoc");
 
 
 
@@ -13,8 +14,15 @@ gulp.task('js', function() {
             .pipe(uglify())
             .pipe(concat('inapp-utils.min.js'))
             .pipe(gulp.dest('.'));
+
+
+    gulp.src('./src/*.js')
+            .pipe(yuidoc())
+            .pipe(gulp.dest("./doc"));
+
+
 });
 
-gulp.task('default', function(){
-    gulp.run('js'); 
+gulp.task('default', function() {
+    gulp.run('js');
 });
