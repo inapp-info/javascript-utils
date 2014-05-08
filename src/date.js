@@ -3,15 +3,14 @@
     /**
      * This is the description for my class.
      *
-     * @class MyClass
+     * @class Date
      * @constructor
      */
     var DateModule = {
         /**
-         * My method description.  Like other pieces of your comment blocks, 
-         * this can span multiple lines.
+         * Check whether the dates overlap
          *
-         * @method methodName
+         * @method isRangeOverlap
          * @param {String} foo Argument 1
          * @param {Object} config A config object
          * @param {String} config.name The name on the config object

@@ -5,7 +5,8 @@ var gulp = require('gulp'),
         gutil = require('gulp-util'),
         uglify = require('gulp-uglify'),
         concat = require('gulp-concat'),
-        yuidoc = require("gulp-yuidoc");
+        yuidoc = require("gulp-yuidoc"),
+        qunit = require('gulp-qunit');
 
 
 
@@ -22,6 +23,16 @@ gulp.task('js', function() {
 
 
 });
+
+/**
+ * Unit Testing
+ */
+gulp.task('test', function() {
+    return gulp.src('./test/index.html')
+        .pipe(qunit());
+});
+
+
 
 gulp.task('default', function() {
     gulp.run('js');
