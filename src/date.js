@@ -23,14 +23,14 @@
             return (startDate1 >= startDate2 && startDate1 <= endDate2 && endDate2 != startDate1) ||
                     (startDate2 >= startDate1 && startDate2 <= endDate1 && endDate2 != startDate1);
         },
+        
         /**
          * Convert from 24 hour to 12 hour format
          * @method is12HourFormat
          * @param {Date} date
          * @return {String} Returns 24 hour time
+         * @example inapp.Date.get12HourTimeFormat(new Date())
          */
-
-
         get12HourTimeFormat: function(start) {
             var AMPM;
             var hour;
@@ -39,6 +39,8 @@
             if (start.getMinutes() == 0) {
                 min = "00";
             }
+                AMPM = "PM";
+                hour = start.getHours() - 12;
             if (start.getHours() == 12) {
                 AMPM = "PM";
                 hour = 12;
@@ -47,7 +49,6 @@
                 AMPM = "AM";
                 hour = start.getHours();
             }
-
             else {
                 AMPM = "PM";
                 hour = start.getHours() - 12;
